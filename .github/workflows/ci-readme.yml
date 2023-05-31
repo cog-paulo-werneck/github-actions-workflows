@@ -72,10 +72,10 @@ jobs:
 
       - name: Auto-update README.md for bot pull requests
         id: auto_commit
-        if: | 
-          steps.readme_diff.outcome == 'failure' && 
-          startsWith(inputs.ref, 'renovate/') &&
-          inputs.suggestions
+        #if: | 
+        #  steps.readme_diff.outcome == 'failure' && 
+        #  startsWith(inputs.ref, 'renovate/') &&
+        #  inputs.suggestions
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
